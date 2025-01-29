@@ -1,6 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 500vh; /* Assure un défilement vertical */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%; /* Rectangle pleine largeur */
+    height: 200px;
+    background-color: #d3d3d3; /* Rectangle gris */
+    border: 2px solid #aaa;
+    display: flex;
+    align-items: center;
+}
+
+.element {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; /* Carré bleu */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    left: 0; /* Début à gauche */
+}
+
 #premier_cercle{
     width: 100px;
     height: 100px;
     border: solid 1px blue;
     border-radius: 50%;
 }
+

@@ -9,35 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Styles généraux */
-        body {
-            margin: 0;
-            padding: 0;
-            height: 500vh; /* Assure un défilement vertical */
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        .container {
-            position: relative;
-            width: 100%; /* Rectangle pleine largeur */
-            height: 200px;
-            background-color: #d3d3d3; /* Rectangle gris */
-            border: 2px solid #aaa;
-            display: flex;
-            align-items: center;
-        }
-
-        .element {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: #3498db; /* Carré bleu */
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            left: 0; /* Début à gauche */
-        }
     </style>
 </head>
 <body>
@@ -49,26 +21,7 @@
 
 
 
-    <script>
-        // GSAP avec ScrollTrigger pour déplacer le carré et "bloquer" l'écran
-        gsap.registerPlugin(ScrollTrigger);
-
-        const circle = document.getElementById('circle');
-        const container = document.querySelector('.container');
-        const maxMove = container.clientWidth - circle.clientWidth; // Déplacement maximal
-
-        // Créer une animation GSAP liée au scroll avec effet "pin"
-        gsap.to(circle, {
-            x: maxMove, // Déplacement horizontal jusqu'à la fin de la largeur du conteneur
-            scrollTrigger: {
-                trigger: ".container", // Déclenche l'animation lorsque le conteneur est visible
-                start: "top center", // Débute lorsque le haut du conteneur atteint le centre de l'écran
-                end: "+=1000", // Étend la durée de l'animation sur une distance supplémentaire (1000px)
-                scrub: true, // Synchronise l'animation avec le défilement
-                pin: true, // Bloque l'écran sur le conteneur pendant l'animation
-            }
-        });
-    </script>
+    <script src="scriptMike.js"></script>
     <script scr="/scriptClea.js"></script>
 </body>
 </html>
