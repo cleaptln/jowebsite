@@ -1,31 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    height: 500vh; /* Assure un défilement vertical */
+    height: 100vh; /* Assure un défilement vertical */
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container {
-    position: relative;
-    width: 100%; /* Rectangle pleine largeur */
-    height: 200px;
-    background-color: #d3d3d3; /* Rectangle gris */
-    border: 2px solid #aaa;
-    display: flex;
-    align-items: center;
-}
-
-.element {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: #3498db; /* Carré bleu */
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    left: 0; /* Début à gauche */
 }
 
 #premier_cercle{
@@ -33,5 +13,113 @@ body {
     height: 100px;
     border: solid 1px blue;
     border-radius: 50%;
+    position: relative;
+    overflow: hidden;
 }
 
+.svg_vague{
+    position: absolute;
+    bottom: 20%;
+
+}
+
+
+body {
+
+    background-color: white;
+    }
+    
+    .flags{
+        margin: 0;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .flag {
+    width: 250px;
+    height: 165px;
+    background-size: cover;
+    background-position: center;
+    }
+    #un{
+        width: 50px;
+        height: 50px;
+        background-color: #002395;
+        border-radius: 50%;
+        position: absolute;
+        top: 8%;
+        left: 3%;
+    }
+    
+    #deux{
+        width: 50px;
+        height: 50px;
+        background-color: #FFCD00;
+        border-radius: 50%;
+        position: absolute;
+        top: 65%;
+        left: 85%;
+    }
+    #trois{
+        width: 50px;
+        height: 50px;
+        background-color: #009B3A;
+        border-radius: 50%;
+        position: absolute;
+        top: 35%;
+        left: 30%;
+    }
+    
+    #quatre{
+        width: 50px;
+        height: 50px;
+        background-color: #EE1C25;
+        border-radius: 50%;
+        position: absolute;
+        top: 30%;
+        left:75%;
+    }
+    
+    #cinq{
+        width: 50px;
+        height: 50px;
+        background-color: #000000;
+        border-radius: 50%;
+        position: absolute;
+        top: 98%;
+        left:20%;
+    }
+    
+    .cercles{
+        opacity: 0;
+    }
+    .flag:nth-child(1) { background-image: url('https://flagcdn.com/w320/fr.png'); }
+    .flag:nth-child(2) { background-image: url('https://flagcdn.com/w320/us.png'); }
+    .flag:nth-child(3) { background-image: url('https://flagcdn.com/w320/de.png'); }
+    .flag:nth-child(4) { background-image: url('https://flagcdn.com/w320/au.png'); }
+    .flag:nth-child(5) { background-image: url('https://flagcdn.com/w320/jp.png'); }
+    .flag:nth-child(6) { background-image: url('https://flagcdn.com/w320/at.png'); }
+    .flag:nth-child(7) { background-image: url('https://flagcdn.com/w320/be.png'); }
+    .flag:nth-child(8) { background-image: url('https://flagcdn.com/w320/br.png'); }
+    .flag:nth-child(9) { background-image: url('https://flagcdn.com/w320/ca.png'); }
+    .flag:nth-child(10) { background-image: url('https://flagcdn.com/w320/cm.png'); }
+    .flag:nth-child(11) { background-image: url('https://flagcdn.com/w320/cn.png'); }
+    .flag:nth-child(12) { background-image: url('https://flagcdn.com/w320/cu.png'); }
+    .flag:nth-child(13) { background-image: url('https://flagcdn.com/w320/it.png'); }
+    .flag:nth-child(14) { background-image: url('https://flagcdn.com/w320/ng.png'); }
+    .flag:nth-child(15) { background-image: url('https://flagcdn.com/w320/pt.png'); }
+    .flag:nth-child(16) { background-image: url('https://flagcdn.com/w320/kr.png'); }
+    .flag:nth-child(17) { background-image: url('https://flagcdn.com/w320/ch.png'); }
+    .flag:nth-child(18) { background-image: url('https://flagcdn.com/w320/cd.png'); }
+    .flag:nth-child(19) { background-image: url('https://flagcdn.com/w320/gb.png'); }
+    .flag:nth-child(20) { background-image: url('https://flagcdn.com/w320/dk.png'); }
+    .flag:nth-child(21) { background-image: url('https://flagcdn.com/w320/cy.png'); }
+    .flag:nth-child(22) { background-image: url('https://flagcdn.com/w320/cz.png'); }
+    .flag:nth-child(23) { background-image: url('https://flagcdn.com/w320/hr.png'); }
+    .flag:nth-child(24) { background-image: url('https://flagcdn.com/w320/co.png'); }
+    .flag:nth-child(25) { background-image: url('https://flagcdn.com/w320/ec.png'); }
+    .flag:nth-child(26) { background-image: url('https://flagcdn.com/w320/eg.png'); }
+    .flag:nth-child(27) { background-image: url('https://flagcdn.com/w320/fi.png'); }
+    .flag:nth-child(28) { background-image: url('https://flagcdn.com/w320/jm.png'); }
+    .flag:nth-child(29) { background-image: url('https://flagcdn.com/w320/lu.png'); }
+    .flag:nth-child(30) { background-image: url('https://flagcdn.com/w320/mx.png'); }
