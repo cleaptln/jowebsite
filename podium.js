@@ -23,23 +23,4 @@ ScrollTrigger.create({
 
 
 
-gsap.to(".bmx", {
-    motionPath: {
-        path: [
-            { x: 0, y: 0 },   // Départ
-            { x: window.innerWidth / 2, y: -150 }, // Milieu de l'écran, monte un peu
-            { x: window.innerWidth, y: 0 }  // Arrivée, redescend
-        ],
-        curviness: 1.5, // Adoucit la courbe
-        autoRotate: true // Oriente le BMX dans la direction
-    },
-    duration: 2, // Temps total de l’animation
-    ease: "power1.inOut",
-    scrollTrigger: {
-        trigger: "body",
-        start: "bottom-=100px bottom", // Déclenchement quand le bas du BMX est à 100px du bas de l'écran
-        end: "bottom top",
-        scrub: 1, // Animation fluide avec le scroll
-    }
-});
 
