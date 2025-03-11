@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap');
 
+:root {
+    --titre: 35px;
+    --titre2: 25px;
+    --texte: 17;
+    --texte2: 15px;
+}
+
+h2 {
+    font-size: var(--titre);
+}
+h3 {
+    font-size: var(--titre2);
+}
+p {
+    font-size: var(--texte);
+}
+
 
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Assure un défilement vertical */
     font-family: 'Montserrat',sans-serif;
     overflow-x: hidden;
 }
@@ -127,12 +143,11 @@ background-repeat: no-repeat;
 
 
 
-
-
-
 /* Podium */
 
-
+.podium-section{
+    position: relative;
+}
 .podium-container {
     display:flex;
     justify-content: center;
@@ -168,4 +183,106 @@ background-repeat: no-repeat;
     border-radius: 15px;
     height: 50px;
     width: 150px;
+}
+
+.bmx {
+    width: 100px ;
+    position: absolute;
+    top: 70vh; /* Position de départ */
+    left: -100px;
+}
+
+/* frise */
+
+
+
+
+.etapes {
+    display: flex;
+    width: calc(100vw * 4); 
+    overflow-x: hidden;
+    background-color: rgb(17, 17, 69);
+    height: 500px;
+    margin: 35rem 0;
+}
+
+.etape {
+    flex: 0 0 100vw; 
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    padding-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.etapeContent {
+    width: 40%;
+    min-width: 350px;
+    z-index: 1;
+}
+
+.etape h2 {
+    font-family: "Big Shoulders Stencil", sans-serif;
+    font-size: var(--titre);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.titreEtape p {
+    margin:0;
+}
+.cercleEtape {
+    opacity: 0.5;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    position: absolute;
+    z-index: 0.9;
+    bottom: -50px;
+    justify-content: center;
+    align-items: flex-end;
+}
+.cercleEtape svg {
+    width: 40%;
+    height: 40%;
+    transform-origin: center center
+}
+.etapes::before {
+    content: "";
+    width: 50vw;
+    height: 2px;
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+}
+#paris::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    z-index: 1;
+    background-color: none;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    border-bottom: 15px dashed rgb(17, 17, 69);
+}
+
+#LA::before{
+    content: "";
+    width: 150%;
+    height: 2px;
+    z-index: 1;
+    background-color: none;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    border-bottom: 15px dashed rgb(17, 17, 69);
 }
