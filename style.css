@@ -25,7 +25,6 @@ body {
 
 
 body {
-
     background-color: white;
     }
     
@@ -34,12 +33,15 @@ body {
         display: none;
         flex-wrap: wrap;
         justify-content: center;
+        position: relative;
     }
     .flag {
     width: 250px;
     height: 165px;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
     }
     #un{
         width: 50px;
@@ -49,6 +51,7 @@ body {
         position: absolute;
         top: 8%;
         left: 3%;
+        opacity: 0;
     }
     
     #deux{
@@ -57,8 +60,8 @@ body {
         background-color: #FFCD00;
         border-radius: 50%;
         position: absolute;
-        top: 65%;
-        left: 85%;
+        top: 10%;
+        left: 50%;
     }
     #trois{
         width: 50px;
@@ -66,8 +69,8 @@ body {
         background-color: #009B3A;
         border-radius: 50%;
         position: absolute;
-        top: 35%;
-        left: 30%;
+        top: 5%;
+        left: 5%;
     }
     
     #quatre{
@@ -122,4 +125,4 @@ body {
     .flag:nth-child(27) { background-image: url('https://flagcdn.com/w320/fi.png'); }
     .flag:nth-child(28) { background-image: url('https://flagcdn.com/w320/jm.png'); }
     .flag:nth-child(29) { background-image: url('https://flagcdn.com/w320/lu.png'); }
-    .flag:nth-child(30) { background-image: url('https://flagcdn.com/w320/mx.png'); }
+    .flag:nth-child(30) { background-image: url('https://flagcdn.com/w320/pl.png'); }

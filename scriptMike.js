@@ -45,9 +45,13 @@
                 });
                 
                 setTimeout(()=>{
-                    let cercles = document.querySelector('.cercles');
-                    cercles.style.transition = 'opacity 1s';
-                    cercles.style.opacity = 1;
+                    let cercles = document.querySelectorAll('.cercle');
+                    let flags = document.querySelectorAll('.flag');
+
+
+                       cercles.forEach((cercle) => {
+                           cercle.style.opacity = 1;
+                        });
                 }, 2000);
                 // Phase 2 : Disparition après 5s
                 setTimeout(() => {
@@ -56,23 +60,43 @@
                     shuffledFlags.forEach((flag, index) => {
                         let delay = index * 0.3; // Décalage progressif
     
-                        gsap.to(flag, {
-                            opacity: 0,
-                            scale: 0.5,
-                            duration: 1,
-                            delay: delay,
-                            ease: "power2.inOut"
-                        });
+                        gsap.fromTo(flag, 
+                            { backgroundSize: "100% 100%" }, // État initial
+                            { 
+                                backgroundSize: "0% 0%", // État final
+                                duration: 1,
+                                delay: delay,
+                                ease: "power2.inOut"
+                            }
+                        );
+                            
                     });
-    
                 }, 2000); // Début de la disparition après 5 secondes
             }, 300);
         });
     
-    
-    gsap.to('#un',{
-        duration: 2,
-        x: 400,
-        y: 700,
+// Sélection des drapeaux
+let drapeaux = [
+    document.querySelector('.flag:nth-child(1)'),
+    document.querySelector('.flag:nth-child(24)'),
+    document.querySelector('.flag:nth-child(8)'),
+    document.querySelector('.flag:nth-child(11)'),
+    document.querySelector('.flag:nth-child(26)')
+];
+
+// Animation des drapeaux vers le centre de la div.flags
+drapeaux.forEach(drapeau => {
+    gsap.to(drapeau, {
+        xPercent: -50, // Déplacement horizontal pour centrer l'élément par rapport à son propre centre
+        yPercent: -50, // Idem pour le vertical
+        left: "50%",   // Positionnement par rapport à la div parente
+        top: "50%",
+        duration: 1,
         delay: 12,
-    })
+        ease: "power2.inOut"
+    });
+});
+
+
+
+
