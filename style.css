@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* Assure un défilement vertical */
+    min-height: 100vh; /* Assure un défilement vertical */
     background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Montserrat',sans-serif;
 }
 
 #premier_cercle{
