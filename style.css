@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh; /* Assure un défilement vertical */
-    background-color: #f0f0f0;
     font-family: 'Montserrat',sans-serif;
 }
 
