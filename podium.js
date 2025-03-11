@@ -37,7 +37,7 @@ gsap.to(".bmx", {
     ease: "power1.inOut",
     scrollTrigger: {
         trigger: "body",
-        start: "top top",
+        start: "bottom-=100px bottom", // Déclenchement quand le bas du BMX est à 100px du bas de l'écran
         end: "bottom top",
         scrub: 1, // Animation fluide avec le scroll
     }
