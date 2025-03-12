@@ -1,9 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
+
+
 let etapes = gsap.utils.toArray(".etape");
 console.log(etapes);
 
-gsap.to(etapes, {
+let scrollEtape = gsap.to(etapes, {
   xPercent: -100 * (etapes.length - 1),
   ease: "none",
   scrollTrigger: {
@@ -16,32 +19,67 @@ gsap.to(etapes, {
   }
 });
 
-etapes.forEach((etape, index) => {
-  let cercle = etape.querySelector(".cercleEtape svg");
 
-  if (cercle) {
-    ScrollTrigger.create({
-      trigger: etape,
-      start: "30% right", // quand l'étape est à 40% du bord gauche
-      end: "10% left", // quand l'étape est au centre de la vue
-      onEnter: () => {
-        console.log(`onEnter ${index}`, etape);
-        gsap.to(cercle, { duration: 0.5, scale: 3, transformOrigin: "center center", y: -100 });
-      },
-      onLeave: () => {
-        console.log(`onLeave ${index}`, etape);
-        gsap.to(cercle, { duration: 0.5, scale: 0.2, transformOrigin: "center center", y: 0 });
-      },
-      onEnterBack: () => {
-        console.log(`onEnterBack ${index}`, etape);
-        gsap.to(cercle, { duration: 0.5, scale: 3, transformOrigin: "center center", y: -100 });
-      },
-      onLeaveBack: () => {
-        console.log(`onLeaveBack ${index}`, etape);
-        gsap.to(cercle, { duration: 0.5, scale: 0.2, transformOrigin: "center center", y: 0 });
-      }
-    });
-  } else {
-    console.log(`No cercle found in ${index}`, etape);
-  }
+gsap.to('.etape1', {
+  y:-innerHeight,
+  duration: 0.5,
+  ease: "none",
+  scale:'3',
+  scrollTrigger: {
+    start: "50% bottom",
+    end: "50% left",
+    trigger: ".etape1",
+    containerAnimation : scrollEtape,
+    scrub:true,
+    id:'2',
+  },
 });
+
+
+gsap.to('.etape2', {
+  y:-innerHeight,
+  duration: 0.5,
+  ease: "none",
+  scale:'3',
+  scrollTrigger: {
+    start: "10% right",
+    end: "50% left",
+    trigger: ".etape2",
+    containerAnimation : scrollEtape,
+    scrub:true,
+    id:'2',
+  },
+});
+
+
+gsap.to('.etape3', {
+  y:-innerHeight,
+  duration: 0.5,
+  ease: "none",
+  scale:'3',
+  scrollTrigger: {
+    start: "10% right",
+    end: "50% left",
+    trigger: ".etape3",
+    containerAnimation : scrollEtape,
+    scrub:true,
+    id:'2',
+  },
+});
+
+
+gsap.to('.etape4', {
+  y:-innerHeight,
+  duration: 0.5,
+  ease: "none",
+  scale:'3',
+  scrollTrigger: {
+    start: "10% right",
+    end: "50% left",
+    trigger: ".etape4",
+    containerAnimation : scrollEtape,
+    scrub:true,
+    id:'2',
+  },
+});
+

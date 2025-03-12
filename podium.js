@@ -20,7 +20,3 @@ ScrollTrigger.create({
         gsap.to(bronze, { height: '50px', duration: 0.5, ease: "power2.inOut" });
     },  
 });
-
-
-
-
