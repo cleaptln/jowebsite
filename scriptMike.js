@@ -19,62 +19,75 @@
 
         let cercles = document.querySelectorAll('.cercles');
         document.addEventListener("DOMContentLoaded", () => {
+            let flagsContainer = document.querySelector('.flags');
             let flags = document.querySelectorAll('.flag');
-            let container = document.querySelector('.flags');
-    
-            container.style.opacity = 0;
-            container.style.display = 'flex';
-    
-            // Phase 1 : Apparition avec flip
+        
+            flagsContainer.style.opacity = 0;
+            flagsContainer.style.display = 'flex';
+        
+            // Initialisation : Masquer les cercles et préparer les drapeaux
+            flags.forEach(flag => {
+                let cercle = flag.querySelector('.cercle'); 
+                if (cercle) {
+                    cercle.style.opacity = 0;
+                    cercle.style.visibility = "hidden";
+                }
+            });
+        
+            // Phase 1 : Apparition des drapeaux
             setTimeout(() => {
-                container.style.transition = 'opacity 1s';
-                container.style.opacity = 1;
-    
+                flagsContainer.style.transition = 'opacity 1s';
+                flagsContainer.style.opacity = 1;
+        
                 gsap.set(flags, { rotateY: 180, opacity: 0 });
-    
+        
                 flags.forEach((flag, index) => {
-                    let delay = Math.random() * 1.5; // Délai aléatoire
-    
+                    let delay = Math.random() * 1;
+        
                     gsap.to(flag, {
                         opacity: 1,
                         rotateY: 0,
-                        duration: 1,
+                        duration: 0.6,
                         delay: delay,
                         ease: "back.out(1.7)"
                     });
                 });
-                
-                setTimeout(()=>{
-                    let cercles = document.querySelectorAll('.cercle');
-                    let flags = document.querySelectorAll('.flag');
-
-
-                       cercles.forEach((cercle) => {
-                           cercle.style.opacity = 1;
-                        });
-                }, 2000);
-                // Phase 2 : Disparition après 5s
+        
+                // Phase 2 : Disparition progressive des drapeaux SANS toucher les cercles
                 setTimeout(() => {
-                    let shuffledFlags = [...flags].sort(() => Math.random() - 0.5); // Mélange aléatoire
-    
+                    let shuffledFlags = [...flags].sort(() => Math.random() - 0.5);
+        
                     shuffledFlags.forEach((flag, index) => {
-                        let delay = index * 0.3; // Décalage progressif
-    
-                        gsap.fromTo(flag, 
-                            { backgroundSize: "100% 100%" }, // État initial
-                            { 
-                                backgroundSize: "0% 0%", // État final
-                                duration: 1,
-                                delay: delay,
-                                ease: "power2.inOut"
+                        let delay = index * 0.075;
+                        let cercle = flag.querySelector('.cercle');
+        
+                        // On fait disparaître uniquement le "contenu" du drapeau, pas la div entière
+                        gsap.to(flag, {
+                            backgroundSize: "0% 0%", // Rétrécir le fond
+                            border: "none", // Supprimer la bordure (si besoin)
+                            duration: 0.5,
+                            delay: delay,
+                            ease: "power2.inOut",
+                            onComplete: () => {
+                                if (cercle) {
+                                    console.log("Affichage du cercle :", cercle);
+                                    gsap.to(cercle, {
+                                        opacity: 1,
+                                        duration: 0.5,
+                                        ease: "power2.out",
+                                        onStart: () => {
+                                            cercle.style.visibility = "visible";
+                                        }
+                                    });
+                                }
                             }
-                        );
-                            
+                        });
                     });
-                }, 2000); // Début de la disparition après 5 secondes
+                }, 2000);
             }, 300);
         });
-    
+        
+        
 // Sélection des drapeaux
 let drapeaux = [
     document.querySelector('.flag:nth-child(1)'),
@@ -84,19 +97,100 @@ let drapeaux = [
     document.querySelector('.flag:nth-child(26)')
 ];
 
-// Animation des drapeaux vers le centre de la div.flags
-drapeaux.forEach(drapeau => {
-    gsap.to(drapeau, {
-        xPercent: -50, // Déplacement horizontal pour centrer l'élément par rapport à son propre centre
-        yPercent: -50, // Idem pour le vertical
-        left: "50%",   // Positionnement par rapport à la div parente
-        top: "50%",
-        duration: 1,
-        delay: 12,
-        ease: "power2.inOut"
+// // Animation des drapeaux vers le centre de la div.flags
+// drapeaux.forEach(drapeau => {
+//     console.log(drapeau),
+//     gsap.to(drapeau, {
+//         duration: 1,
+//         delay: 12,
+//         ease: "power2.inOut"
+//     });
+// });
+
+
+// Sélection des drapeaux
+document.addEventListener("DOMContentLoaded", () => {
+    let flagsContainer = document.querySelector('.flags');
+    let drapeaux = [
+        document.querySelector('.flag:nth-child(1)'),
+        document.querySelector('.flag:nth-child(24)'),
+        document.querySelector('.flag:nth-child(8)'),
+        document.querySelector('.flag:nth-child(11)'),
+        document.querySelector('.flag:nth-child(26)')
+    ];
+
+    let containerRect = flagsContainer.getBoundingClientRect();
+    let centerX = containerRect.width / 2;
+    let centerY = containerRect.height / 2;
+    let anneauxH = [
+        document.querySelector('.anneau1'),
+        document.querySelector('.anneau5'),
+        document.querySelector('.anneau3'),
+    ]
+    let anneauxB = [
+        document.querySelector('.anneau2'),
+        document.querySelector('.anneau4'),
+    ]
+    drapeaux.forEach(drapeau => {
+        let flagRect = drapeau.getBoundingClientRect();
+
+        let offsetX = centerX - (flagRect.width / 2) - (flagRect.left - containerRect.left);
+        let offsetY = centerY - (flagRect.height / 2) - (flagRect.top - containerRect.top);
+
+        gsap.to(drapeau, {
+            x: offsetX,
+            y: offsetY,
+            duration: 1,
+            delay: 6.2,
+            ease: "power2.inOut"
+        });
+        gsap.to(drapeau, {
+            opacity: 0,
+            scale : 0,
+            duration: 1,
+            delay: 6.5,
+            ease: "power2.inOut"
     });
 });
+    let decalH = 200
+    let decal = 340
+    let descendre = 100
+    anneauxH.forEach(anneau => {
 
+        gsap.to(anneau, {
+            x : decalH,
+            scale: 20,
+            opacity: 1,
+            duration: 1,
+            delay: 7,
+            ease: "power2.inOut"
+        });
+        decalH+=280
+    });
 
+    anneauxB.forEach(anneau => {
 
+        gsap.to(anneau, {
+            x : decal,
+            y : descendre,
+            scale: 20,
+            opacity: 1,
+            duration: 1,
+            delay: 7,
+            ease: "power2.inOut"
+        });
+        decal+=280
+    });
+
+    let allanneaux = document.querySelectorAll('.allanneaux') 
+    
+    gasp.to(allanneaux, {
+        x : -500,
+        opacity: 1,
+        duration: 1,
+        delay: 7,
+        ease: "power2.inOut"
+    });
+
+});
 
