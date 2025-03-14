@@ -8,6 +8,7 @@ let scrollEtape = gsap.to(etapes, {
   scrollTrigger: {
     start: "top top+=80",
     trigger: ".etapes",
+    scrub: 1,
     pin: true,
     scrub: 1,
     snap: 1 / (etapes.length - 1),
