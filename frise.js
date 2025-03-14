@@ -1,10 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-
 let etapes = gsap.utils.toArray(".etape");
-console.log(etapes);
 
 let scrollEtape = gsap.to(etapes, {
   xPercent: -100 * (etapes.length - 1),
@@ -18,6 +14,7 @@ let scrollEtape = gsap.to(etapes, {
     end: () => "+=" + document.querySelector(".etapes").offsetWidth
   }
 });
+
 
 
 gsap.to('.etape1', {
