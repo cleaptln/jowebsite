@@ -182,10 +182,10 @@ document.addEventListener("DOMContentLoaded", () => {
         decal+=280
     });
 
-    let allanneaux = document.querySelectorAll('.allanneaux') 
-    
-    gasp.to(allanneaux, {
-        x : -500,
+    let allanneaux = document.querySelector('.allanneaux') ;
+    console.log(allanneaux);
+    gsap.to(allanneaux, {
+        x : -450,
         opacity: 1,
         duration: 1,
         delay: 7,
