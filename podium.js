@@ -7,33 +7,41 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.to('.podium-or', {
     height: '300px', 
-    delay: 3.6,
+    delay: 0.5,
     duration: 1.5, 
     ease: "power2.inOut",
     scrollTrigger: {
         trigger: '.podium-section',
-        start: 'bottom 500px',
+        start: "top 90%", // Déclenche lorsque le haut de la section atteint 90% de la hauteur de la fenêtre
+        end: "bottom 20%", // L'animation continue jusqu'à ce que le bas de la section atteigne 20% de la fenêtre
     }
 });
+
+
 
 
 gsap.to('.podium-argent', {
     height: '200px', 
-    delay: 3.3,
+    delay: 0.3,
     duration: 1.5, 
     ease: "power2.inOut",
     scrollTrigger: {
         trigger: '.podium-section',
-        start: 'bottom 500px',
+        start: "top 90%", // Déclenche lorsque le haut de la section atteint 90% de la hauteur de la fenêtre
+        end: "bottom 20%", // L'animation continue jusqu'à ce que le bas de la section atteigne 20% de la fenêtre
     }
+    
 });
+
 gsap.to('.podium-bronze', {
     height: '150px', 
-    delay: 3,
+    delay: 0.1,
     duration: 1.5, 
     ease: "power2.inOut",
     scrollTrigger: {
         trigger: '.podium-section',
-        start: 'bottom 500px',
+        start: "top 90%", // Déclenche lorsque le haut de la section atteint 90% de la hauteur de la fenêtre
+        end: "bottom 20%", // L'animation continue jusqu'à ce que le bas de la section atteigne 20% de la fenêtre
     }
+    
 });

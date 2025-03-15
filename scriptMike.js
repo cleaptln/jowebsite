@@ -191,6 +191,28 @@ document.addEventListener("DOMContentLoaded", () => {
         delay: 7,
         ease: "power2.inOut"
     });
+    gsap.registerPlugin(ScrollTrigger);
 
+    let animationTriggered = false;
+
+    window.addEventListener("scroll", () => {
+        if (!animationTriggered && window.scrollY > 100) { // Déclenche après 100px de scroll
+            animationTriggered = true;
+
+            gsap.to(".allanneaux div", {
+                borderColor: "white",
+                duration: 0.5
+            });
+
+            gsap.to(".center", {
+                backgroundColor: "rgb(17, 17, 69)",
+                duration: 0.5
+            });
+            gsap.to("body", {
+                backgroundColor: "rgb(17, 17, 69)",
+                duration: 0.5
+            });
+        }
+    });
 });
 
