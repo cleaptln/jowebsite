@@ -186,56 +186,6 @@ background-repeat: no-repeat;
 .flag:nth-child(30) { background-image: url('https://flagcdn.com/w320/pl.png'); }
 
 
-/* Podium */
-
-.podium-section{
-    position: relative;
-    background-color: white;
-}
-.podium-container {
-    display:flex;
-    justify-content: center;
-    align-items: end;
-    margin-bottom: 300px;
-}
-
-.podium {
-    display: flex;    
-    flex-direction: column;
-    max-height: 500px;
-    justify-content: center;
-    align-items: center;
-}
-
-.podium-argent {
-    border-radius: 15px;
-    background-color: navy;
-    height: 50px;
-    width: 150px;
-}
-
-.podium-or {
-    background-color: white;
-    border-radius: 15px;
-    border: 1px solid black;
-    height: 50px;
-    width: 150px;
-}
-
-.podium-bronze {
-    background-color: red;
-    border-radius: 15px;
-    height: 50px;
-    width: 150px;
-}
-
-.bmx {
-    width: 100px ;
-    position: absolute;
-    top:0; /* Position de départ */
-    left: -100px;
-}
-
 /* frise */
 
 .etapes {
@@ -319,7 +269,7 @@ background-repeat: no-repeat;
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-bottom: 200px;
+    background-color: white;
 }
 
 .infos_bmx {
@@ -372,10 +322,6 @@ background-repeat: no-repeat;
     border-radius: 15px;
     height: 50px;
     width: 150px;
-}
-
-.bmx {
-    width: 200px ;
 }
 
 
