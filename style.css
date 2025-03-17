@@ -150,6 +150,10 @@ background-repeat: no-repeat;
 .anneau5{
     border:0.2px solid #000000;
 }
+
+.allanneaux{
+    position: absolute;
+}
 .flag:nth-child(1) { background-image: url('https://flagcdn.com/w320/fr.png'); }
 .flag:nth-child(2) { background-image: url('https://flagcdn.com/w320/us.png'); }
 .flag:nth-child(3) { background-image: url('https://flagcdn.com/w320/de.png'); }
