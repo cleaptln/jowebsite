@@ -26,6 +26,7 @@ body {
     overflow-x: hidden;
     font-family: 'Montserrat',sans-serif;
     background-color: rgb(17, 17, 69) ;
+    position: relative;
 }
 
 .flags{
@@ -262,7 +263,7 @@ background-repeat: no-repeat;
     width: 50%;
     height: 100%;
 }
-.infos_bmx p {
+.infos_bmx p, .infos_bmx h1 {
     flex-grow: 1;
     padding: 10px;
     width: 80%;
@@ -315,32 +316,37 @@ background-repeat: no-repeat;
 
 .leon-section {
     width: 100%;
-    height: 50rem;
+    height: 60rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
     color: white;
+    padding-top: 3rem;
     position: relative;
+    gap: 50px;
 }
 
 #leonPhoto{
-    height: 500px;
+    height: 900px;
     position: absolute;
-    top: 30%;
-    right: 0;
+    top: 20px;
+    left : 60%;
 }
 
 .leonInfos {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    text-align: left;
     width : 80%;
+    padding-top: 30px;
 }
 
+.discipline h2 {
+    color: rgb(233, 190, 88);
+}
 
 .medaille {
     width: 200px;
@@ -363,14 +369,15 @@ background-repeat: no-repeat;
 
 .discipline {
     scroll-snap-align: center;
-    padding-left:0.2em;
+    padding-left:2em;
 
 } 
+
 
 .mainTitle {
     flex-grow: 0;
 	align-self: flex-start;	
-    margin: 0;
+    margin-left: 100px;
 }
 
 .discipline h2, .rotator {
@@ -383,10 +390,10 @@ background-repeat: no-repeat;
 
 .rotator {
     list-style-type:none;
-	padding-left:50px;
-    transform: translateY(20%);
-
+	padding-left:20px;
+    transform: translateY(50px);
 }
+
 
 .disciplines {
     display: flex;
@@ -399,7 +406,7 @@ background-repeat: no-repeat;
 
 footer {
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-image: url('img/footerJO.png');
     background-size: cover; 
     background-repeat: no-repeat;
@@ -407,6 +414,10 @@ footer {
     align-items: flex-end;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
 }
 
 .copyright {
@@ -415,6 +426,17 @@ footer {
     font-size: 15px;
     align-items: center;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+  #leonPhoto {
+    height: 700px;
+    top:auto;
+    bottom: 0;
+  }
+}
+
 
 @media screen and (min-width: 451px) and (max-width: 800px) {
     
@@ -426,7 +448,6 @@ footer {
         opacity: 0.3;
         object-fit: cover;
     }
-
 
     .etape {
         padding-top: 0;
@@ -448,10 +469,15 @@ footer {
     }
     .podium-container{
         padding-top: 30px;
+        margin: 0 auto;
     }
-    .medialle {
-        width: 50px;
-        height:50px;
+    .medaille {
+        width: 100px;
+        height:100px;
+    }
+
+    .mainTitle {
+        margin-left: 10px;
     }
 
     .flag {
@@ -463,6 +489,13 @@ footer {
         display: none;
     }
 
+    #leonPhoto {
+        top : 500px;
+        left:50%;
+    }
+    .leon-section {
+        height: 70rem;
+    }
 
 }
 
@@ -501,6 +534,10 @@ footer {
         left: 0;
     }
 
+    .disciplines {
+        transform: translateX(-200px);
+    }
+
     .podium-section {
         flex-direction: column;
     }
@@ -519,14 +556,21 @@ footer {
     .podium-container{
         padding-top: 30px;
     }
-    .medialle {
-        width: 50px;
-        height:50px;
-    }
-
 
     footer {
         height: 200px;
+    }
+
+    #leonPhoto {
+        top : 250px;
+        left:80%;
+    }
+    .leon-section {
+        height: 70rem;
+    }
+
+    .discipline {
+        width: 300px;
     }
 
 }
