@@ -321,14 +321,12 @@ background-repeat: no-repeat;
     width: 100%;
     height: 60rem;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     overflow: hidden;
     color: white;
     padding-top: 3rem;
     position: relative;
-    gap: 50px;
 }
 
 #leonPhoto{
@@ -343,65 +341,50 @@ background-repeat: no-repeat;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width : 80%;
-    padding-top: 30px;
-}
-
-.discipline h2 {
-    color: rgb(233, 190, 88);
-}
-
-.medaille {
-    width: 200px;
-    height: 200px;
-    aspect-ratio: contain;
+    width : 40%;
+    padding: 30px 0 50px 20%;
 }
 
 .performance {
     display: flex;
-    width: 100%;
     align-items: center;
-    font-size: 15px;
-    font-weight: 400;
+}
+.medaille {
+    height: 200px;
+    width: 200px;
+}
+.medaille img {
+    width: 100%;
+    aspect-ratio: contain;
+}
+.disciplines{
+    display: flex;
+    padding-left: 10%;
+    align-items: center;
+}
+
+.rotator {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.disContainer {
+    height: 120px;
+    overflow: hidden;
+}
+
+.discipline h2 {
+    color: #eacb77;
+    margin-bottom: 0;
 }
 .performance i {
     font-size: 30px;
     padding-right: 10px;
 }
 
-
 .discipline {
-    scroll-snap-align: center;
-    padding-left:2em;
-
-} 
-
-
-.mainTitle {
-    flex-grow: 0;
-	align-self: flex-start;	
-    margin-left: 100px;
-}
-
-.discipline h2, .rotator {
-    margin:0;
-	font-weight:800;
-	text-transform:uppercase;
-	letter-spacing:0.06em;
-	line-height:1;
-}
-
-.rotator {
-    list-style-type:none;
-	padding-left:20px;
-    transform: translateY(50px);
-}
-
-
-.disciplines {
-    display: flex;
-    width: 100%;
-    align-items: center;
+    height: 120px;
 }
 
 
@@ -411,7 +394,7 @@ footer {
     width: 100%;
     height: 400px;
     background-image: url('img/footerJO.png');
-    background-size: cover; 
+    background-size: contain; 
     background-repeat: no-repeat;
     background-position: top left;
     align-items: center;
@@ -483,11 +466,6 @@ footer {
         width: 100px;
         height:100px;
     }
-
-    .mainTitle {
-        margin-left: 10px;
-    }
-
     .flag {
         width: 100px;
         height: 60px;
@@ -542,10 +520,6 @@ footer {
         left: 0;
     }
 
-    .disciplines {
-        transform: translateX(-200px);
-    }
-
     .podium-section {
         flex-direction: column;
     }
@@ -576,9 +550,4 @@ footer {
     .leon-section {
         height: 70rem;
     }
-
-    .discipline {
-        width: 300px;
-    }
-
 }

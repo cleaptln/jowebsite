@@ -11,7 +11,7 @@ window.addEventListener("scroll", () => {
         animationTriggered = true;
 gsap.to('.podium-or', {
     height: '300px', 
-    delay: 0.5,
+    delay: 1,
     duration: 1.5, 
     ease: "power2.inOut",
     scrollTrigger: {
@@ -26,7 +26,7 @@ gsap.to('.podium-or', {
 
 gsap.to('.podium-argent', {
     height: '200px', 
-    delay: 0.3,
+    delay: 0.8,
     duration: 1.5, 
     ease: "power2.inOut",
     scrollTrigger: {
@@ -39,7 +39,7 @@ gsap.to('.podium-argent', {
 
 gsap.to('.podium-bronze', {
     height: '150px', 
-    delay: 0.1,
+    delay: 0.6,
     duration: 1.5, 
     ease: "power2.inOut",
     scrollTrigger: {
@@ -47,6 +47,5 @@ gsap.to('.podium-bronze', {
         start: "top 90%", // Déclenche lorsque le haut de la section atteint 90% de la hauteur de la fenêtre
         end: "bottom 20%", // L'animation continue jusqu'à ce que le bas de la section atteigne 20% de la fenêtre
     }
-    
 });
     }});
