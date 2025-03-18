@@ -153,19 +153,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
     let decalH = 200
-    let decal = 340
-    let descendre = 100
+    let decal = 280
+    let descendre = 75
     anneauxH.forEach(anneau => {
 
         gsap.to(anneau, {
             x : decalH,
-            scale: 20,
+            scale: 12,
             opacity: 1,
             duration: 1,
             delay: 7,
             ease: "power2.inOut"
         });
-        decalH+=280
+        decalH+=150
     });
 
     anneauxB.forEach(anneau => {
@@ -173,19 +173,19 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(anneau, {
             x : decal,
             y : descendre,
-            scale: 20,
+            scale: 12,
             opacity: 1,
             duration: 1,
             delay: 7,
             ease: "power2.inOut"
         });
-        decal+=280
+        decal+=150
     });
 
     let allanneaux = document.querySelector('.allanneaux') ;
     console.log(allanneaux);
     gsap.to(allanneaux, {
-        x : -450,
+        x : -350,
         opacity: 1,
         duration: 1,
         delay: 7,
@@ -216,3 +216,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.body.classList.add("no-scroll");
+
+setTimeout(() => {
+    document.body.classList.remove("no-scroll");
+}, 8000);

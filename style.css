@@ -28,6 +28,9 @@ body {
     background-color: rgb(17, 17, 69) ;
     position: relative;
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 .flags{
     margin: 0;
