@@ -5,35 +5,31 @@ gsap.set("li:not(:first-of-type)", {opacity:0, scale:0.8})
 
 const tl = gsap.timeline()
     .to("li:not(:first-of-type)", 
-         {opacity:1, scale:1, stagger:0.5}
+        {opacity:1, scale:1, stagger:0.5}
         )
-   .to("li:not(:last-of-type)", 
-         {opacity:0, scale:0.8, stagger:0.5}, 0)
+.to("li:not(:last-of-type)", 
+        {opacity:0, scale:0.8, stagger:0.5}, 0)
 
 const t2 = gsap.timeline()
-    .to("li",
-        { y: (i) => `-${i * 100}%`}
-    )
+.to(".discipline", 
+    { y: (i) => `-${(i) * 100}%`} // Décalage dès le départ
+);
 
-    
 ScrollTrigger.create({
-    trigger: ".disciplines",
-    start: "center center",
+    trigger: ".leon-section",
+    start: "top top",
     endTrigger: "li:last-of-type",
     end: "center center",
     pin: true,
-    markers: true,
     animation: tl,
     scrub: true,
 });
 
 ScrollTrigger.create({
-    trigger: ".leon-section",
+    trigger: "li",
     start: "center center",
-    endTrigger: "li:last-of-type",
     end: "center center",
-    pin: true,
-    markers: true,
     animation: t2,
     scrub: true,
 });
+
