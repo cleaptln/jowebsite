@@ -414,13 +414,18 @@ footer {
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: top left;
-    align-items: flex-end;
+    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     position: absolute;
     bottom: 0;
     left: 0;
-
+    color: #111145;
+}
+.footnote {
+    width: 100%;
+    padding-left: 15px;
 }
 
 .copyright {
