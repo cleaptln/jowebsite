@@ -152,20 +152,22 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "power2.inOut"
     });
 });
-    let decalH = 200
-    let decal = 280
-    let descendre = 75
+
+    if(window.innerWidth < 600){
+        let decalH = 200
+        let decal = 250
+        let descendre = 50
     anneauxH.forEach(anneau => {
 
         gsap.to(anneau, {
             x : decalH,
-            scale: 12,
+            scale: 8,
             opacity: 1,
             duration: 1,
             delay: 7,
             ease: "power2.inOut"
         });
-        decalH+=150
+        decalH+=100
     });
 
     anneauxB.forEach(anneau => {
@@ -173,28 +175,70 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(anneau, {
             x : decal,
             y : descendre,
-            scale: 12,
+            scale: 8,
             opacity: 1,
             duration: 1,
             delay: 7,
             ease: "power2.inOut"
         });
-        decal+=150
+        decal+=100
     });
 
     let allanneaux = document.querySelector('.allanneaux') ;
     console.log(allanneaux);
     gsap.to(allanneaux, {
-        x : -350,
+        x : -300,
         opacity: 1,
         duration: 1,
         delay: 7,
         ease: "power2.inOut"
     });
+}    else{
+        let decalH = 200
+        let decal = 300
+        let descendre = 100
+        anneauxH.forEach(anneau => {
+
+        gsap.to(anneau, {
+            x : decalH,
+            scale: 17,
+            opacity: 1,
+            duration: 1,
+            delay: 7,
+            ease: "power2.inOut"
+        });
+        decalH+=210
+    });
+
+    anneauxB.forEach(anneau => {
+
+        gsap.to(anneau, {
+            x : decal,
+            y : descendre,
+            scale: 17,
+            opacity: 1,
+            duration: 1,
+            delay: 7,
+            ease: "power2.inOut"
+        });
+        decal+=210
+    });
+
+    let allanneaux = document.querySelector('.allanneaux') ;
+    console.log(allanneaux);
+    gsap.to(allanneaux, {
+        x : -420,
+        opacity: 1,
+        duration: 1,
+        delay: 7,
+        ease: "power2.inOut"
+    });
+}
+
     gsap.registerPlugin(ScrollTrigger);
 
     let animationTriggered = false;
-
+    
     window.addEventListener("scroll", () => {
         if (!animationTriggered && window.scrollY > 100) { // Déclenche après 100px de scroll
             animationTriggered = true;
