@@ -22,7 +22,6 @@ ScrollTrigger.create({
     endTrigger: "li:last-of-type",
     end: "center center",
     pin: true,
-    markers: true,
     animation: tl,
     scrub: true,
 });
@@ -33,7 +32,7 @@ ScrollTrigger.create({
     endTrigger: "li:last-of-type",
     end: "center center",
     pin: true,
-    markers: true,
+
     animation: t2,
     scrub: true,
 });
