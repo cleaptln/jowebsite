@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap');
+
+
+$background-color-bleu: rgb(17, 17, 69);
+
+$titre : 35px;
+$titre2: 25px;
+$texte: 17px;
+$texte2: 15px;
+
+h1 {
+    font-size:$titre;
+}
+h2 {
+    font-size: $titre2;
+}
+p {
+    font-size: $texte;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat',sans-serif;
+    background-color: $background-color-bleu ;
+}
+
+/***** ANIMATION DRAPEAUX *********/
+
+
+#premier_cercle{
+    width: 100px;
+    height: 100px;
+    border: solid 1px blue;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f2f2f2;
+    position: relative;
+
+    .flags{
+        margin: 0;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+
+        .flag {
+            width: 250px;
+            height: 165px;
+            background-size: 100% 100%;
+            background-position: center;
+            position: relative;
+            background-repeat: no-repeat;
+
+            #un, #deux, #trois, #quatre, #cinq {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+            }
+            #un { background-color: #002395; }
+            #deux { background-color: #FFCD00; }
+            #trois { background-color: #009B3A; }
+            #quatre {
+                background-color: #EE1C25;
+                opacity: 0;
+            }
+            #cinq { background-color: #000000; }
+        }
+    }
+}
+
+.allanneaux{
+    position: absolute;
+
+    #anneaux{
+        position: absolute;
+        opacity: 0;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+    }
+    
+    .anneau1{
+        border:0.2px solid #002395;
+    }
+    
+    .anneau2{
+        border:0.2px solid  #009B3A;
+    }
+    
+    .anneau3{
+        border:0.2px solid  #EE1C25;
+    }
+    .anneau4{
+        border:0.2px solid #FFCD00;
+    }
+    
+    .anneau5{
+        border:0.2px solid #000000;
+    }
+
+}
+
+
+.flag:nth-child(1) { background-image: url('https://flagcdn.com/w320/fr.png'); }
+.flag:nth-child(2) { background-image: url('https://flagcdn.com/w320/us.png'); }
+.flag:nth-child(3) { background-image: url('https://flagcdn.com/w320/de.png'); }
+.flag:nth-child(4) { background-image: url('https://flagcdn.com/w320/au.png'); }
+.flag:nth-child(5) { background-image: url('https://flagcdn.com/w320/jp.png'); }
+.flag:nth-child(6) { background-image: url('https://flagcdn.com/w320/at.png'); }
+.flag:nth-child(7) { background-image: url('https://flagcdn.com/w320/be.png'); }
+.flag:nth-child(8) { background-image: url('https://flagcdn.com/w320/br.png'); }
+.flag:nth-child(9) { background-image: url('https://flagcdn.com/w320/ca.png'); }
+.flag:nth-child(10) { background-image: url('https://flagcdn.com/w320/cm.png'); }
+.flag:nth-child(11) { background-image: url('https://flagcdn.com/w320/cn.png'); }
+.flag:nth-child(12) { background-image: url('https://flagcdn.com/w320/cu.png'); }
+.flag:nth-child(13) { background-image: url('https://flagcdn.com/w320/it.png'); }
+.flag:nth-child(14) { background-image: url('https://flagcdn.com/w320/ng.png'); }
+.flag:nth-child(15) { background-image: url('https://flagcdn.com/w320/pt.png'); }
+.flag:nth-child(16) { background-image: url('https://flagcdn.com/w320/kr.png'); }
+.flag:nth-child(17) { background-image: url('https://flagcdn.com/w320/ch.png'); }
+.flag:nth-child(18) { background-image: url('https://flagcdn.com/w320/cd.png'); }
+.flag:nth-child(19) { background-image: url('https://flagcdn.com/w320/gb.png'); }
+.flag:nth-child(20) { background-image: url('https://flagcdn.com/w320/dk.png'); }
+.flag:nth-child(21) { background-image: url('https://flagcdn.com/w320/cy.png'); }
+.flag:nth-child(22) { background-image: url('https://flagcdn.com/w320/cz.png'); }
+.flag:nth-child(23) { background-image: url('https://flagcdn.com/w320/hr.png'); }
+.flag:nth-child(24) { background-image: url('https://flagcdn.com/w320/co.png'); }
+.flag:nth-child(25) { background-image: url('https://flagcdn.com/w320/ec.png'); }
+.flag:nth-child(26) { background-image: url('https://flagcdn.com/w320/eg.png'); }
+.flag:nth-child(27) { background-image: url('https://flagcdn.com/w320/fi.png'); }
+.flag:nth-child(28) { background-image: url('https://flagcdn.com/w320/jm.png'); }
+.flag:nth-child(29) { background-image: url('https://flagcdn.com/w320/lu.png'); }
+.flag:nth-child(30) { background-image: url('https://flagcdn.com/w320/pl.png'); }
+
+
+/* frise */
+
+.etapes {
+    display: flex;
+    width: calc(100vw * 4); 
+    background-color: rgb(17, 17, 69);
+    height: 500px;
+    margin: 20rem 0 20rem 0;
+
+    &::before {
+        content: "";
+        width: 50vw;
+        height: 2px;
+        z-index: 1;
+        background-color: white;
+        position: absolute;
+        bottom: 45px;
+        left: 0;
+    }
+
+    .etape {
+        flex: 0 0 100vw; 
+        box-sizing: border-box;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+        padding-top: 50px;
+        position: relative;
+        
+        .etapeContent {
+            width: 40%;
+            min-width: 350px;
+            z-index: 1;
+    
+
+            .titreEtape{
+                h2 {
+                    font-family: "Big Shoulders Stencil", sans-serif;
+                    font-size: var(--titre);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-top: 10px;
+                }
+                p{
+                    margin: 0;
+                }
+            }
+        } 
+        .cercleEtape {
+            opacity: 0.5;
+            width: 700px;
+            height: 700px;
+            display: flex;
+            position: absolute;
+            bottom: -50px;
+            justify-content: center;
+            align-items: flex-end;
+            
+            svg {
+                width: 40%;
+                height: 40%;
+                transform-origin: center center;
+            }
+            img {
+                width: 40%;
+                height: 40%;
+                transform-origin: center center;
+                border-radius: 50%;
+                opacity: 0.3;
+                object-fit: cover;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+/* Podium */
+
+.podium-section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: white;
+    padding: 5rem 0;
+    
+    .infos_bmx {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+
+        p {
+            flex-grow: 1;
+            padding: 10px;
+            width: 80%;
+        }
+        img {
+            width: 80%;
+            border-radius: 20px;
+        }
+
+    }
+    .podium-container {
+        display:flex;
+        justify-content: flex-end;
+        align-items: end;
+
+        .podium {
+            display: flex;    
+            flex-direction: column;
+            max-height: 500px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+
+            .podium-argent {
+                border-radius: 15px;
+                background-color: navy;
+                height: 50px;
+                width: 150px;
+            }
+            
+            .podium-or {
+                background-color: white;
+                border-radius: 15px;
+                border: 1px solid black;
+                height: 50px;
+                width: 150px;
+            }
+
+            .podium-bronze {
+                background-color: red;
+                border-radius: 15px;
+                height: 50px;
+                width: 150px;
+            }
+
+        }
+    }
+}
+
+
+
+/* leon marchand */
+
+.leon-section {
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    position: relative;
+
+    .leonInfos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        width : 80%;
+    }
+
+    .disciplines {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        .mainTitle {
+            flex-grow: 0;
+            align-self: flex-start;	
+            margin: 0;
+
+            .medaille {
+                width: 200px;
+                height: 200px;
+                aspect-ratio: contain;
+            }
+        }
+        .rotator {
+            list-style-type:none;
+            padding-left:50px;
+            transform: translateY(20%);
+            margin:0;
+            font-weight:800;
+            text-transform:uppercase;
+            letter-spacing:0.06em;
+            line-height:1;
+            
+            .discipline {
+                scroll-snap-align: center;
+                padding-left:0.2em;
+
+                h2 {
+                    margin:0;
+                    font-weight:800;
+                    text-transform:uppercase;
+                    letter-spacing:0.06em;
+                    line-height:1;
+                }
+
+                .performance {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    font-size: 15px;
+                    font-weight: 400;
+
+                    i {
+                        font-size: 30px;
+                        padding-right: 10px; 
+                    }
+                }
+            } 
+
+        }
+    }
+
+    #leonPhoto{
+        height: 500px;
+        position: absolute;
+        top: 30%;
+        right: 0;
+    }
+
+}
+
+
+/**** FOOTER ***/
+
+footer {
+    width: 100%;
+    height: 500px;
+    background-image: url('img/footerJO.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: top left;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+
+    .copyright {
+        display: flex;
+        color: rgb(17, 17, 69);
+        font-size: 15px;
+        align-items: center;
+    }
+}
+

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rectangle centré avec carré défilant</title>
+    <title>Jeux Olympiques 2024</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
@@ -152,44 +152,54 @@
 <section class="leon-section"> 
     <div class="leonInfos">
         <h1>Léon Marchand </h1>
+        <p>Texte explicatif</p>
     </div>
     <div class="disciplines">
         <div class="mainTitle">
             <img class="medaille" src="img/medaille_or.png" alt="Médaille Or">
         </div>
         <ul class="rotator">
-            <li>
-                <span>400m quatre nages</span>
+            <li class="discipline">
+                <h2>400m quatre nages</h2>
                 <div class="performance">
                     <i class='bx bxs-timer' style='color:#ffffff'  ></i> 
                     <p> 04 min 02 s 50 (WR, ER) </p>
                 </div>
             </li>
-            <li>
-                <span>200m quatre nages</span>
+            <li class="discipline">
+                <h2>200m quatre nages</h2>
                 <div class="performance">
                     <i class='bx bxs-timer' style='color:#ffffff'  ></i> 
                     <p> 1 min 54 s 06 (OR, ER)</p>
                 </div>
             </li>
-            <li>
-                <span>200m brasse</span>
+            <li class="discipline">
+                <h2>200m brasse</h2>
                 <div class="performance">
                     <i class='bx bxs-timer' style='color:#ffffff'  ></i> 
                     <p> 02 min 05 s 85 (OR, ER) </p>
                 </div>
             </li>
-            <li>
-                <span>200m papillon</span>
+            <li class="discipline">
+                <h2>200m papillon</h2>
                 <div class="performance">
                     <i class='bx bxs-timer' style='color:#ffffff'  ></i> 
                     <p> 01 min 51 s 21 (OR) </p>
                 </div>
             </li>
         </ul>
+
     </div>
         <img id="leonPhoto" src="img/leonM.png" alt="Léon Marchand">
 </section>
+
+<footer>
+    <div class="copyright">
+        <i class='bx bx-copyright' style='color:rgb(17, 17, 69)'  ></i>
+        <p>Mike Candeago, Cléa Portolan</p>
+    </div>
+</footer>
+
 
 
     <script src="podium.js"></script>
