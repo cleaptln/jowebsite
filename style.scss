@@ -3,6 +3,7 @@
 
 
 $background-color-bleu: rgb(17, 17, 69);
+$blanc : #f2f2f2;
 
 $titre : 35px;
 $titre2: 25px;
@@ -48,7 +49,7 @@ body {
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-color: #f2f2f2;
+    background-color: $blanc;
     position: relative;
 
     .flags{
@@ -311,84 +312,79 @@ body {
 
 .leon-section {
     width: 100%;
-    height: 50rem;
+    height: 60rem;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     overflow: hidden;
     color: white;
+    padding-top: 3rem;
     position: relative;
 
     .leonInfos {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
-        text-align: left;
-        width : 80%;
+        width : 40%;
+        padding: 30px 0 50px 20%;
     }
 
     .disciplines {
         display: flex;
-        width: 100%;
+        padding-left: 10%;
         align-items: center;
 
-        .mainTitle {
-            flex-grow: 0;
-            align-self: flex-start;	
-            margin: 0;
-
-            .medaille {
-                width: 200px;
-                height: 200px;
+        .medaille {
+            width: 200px;
+            height: 200px;
+            
+            img {
+                width: 100%;
                 aspect-ratio: contain;
             }
         }
-        .rotator {
-            list-style-type:none;
-            padding-left:50px;
-            transform: translateY(20%);
-            margin:0;
-            font-weight:800;
-            text-transform:uppercase;
-            letter-spacing:0.06em;
-            line-height:1;
+        .disContainer {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
             
-            .discipline {
-                scroll-snap-align: center;
-                padding-left:0.2em;
-
-                h2 {
-                    margin:0;
-                    font-weight:800;
-                    text-transform:uppercase;
-                    letter-spacing:0.06em;
-                    line-height:1;
-                }
-
-                .performance {
-                    display: flex;
-                    width: 100%;
-                    align-items: center;
-                    font-size: 15px;
-                    font-weight: 400;
-
-                    i {
-                        font-size: 30px;
-                        padding-right: 10px; 
+            .rotator {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                
+                .discipline {
+                    height: 120px;
+    
+                    h2 {
+                        color: #eacb77;
+                        margin-bottom: 0;
                     }
-                }
-            } 
-
+    
+                    .performance {
+                        display: flex;
+                        align-items: center;
+    
+                        i {
+                            font-size: 30px;
+                            padding-right: 10px; 
+                        }
+                    }
+                } 
+    
+            }
         }
+        
     }
 
     #leonPhoto{
-        height: 500px;
+        height: 900px;
         position: absolute;
-        top: 30%;
-        right: 0;
+        top: 20px;
+        left : 60%;
     }
 
 }
@@ -398,14 +394,24 @@ body {
 
 footer {
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-image: url('img/footerJO.png');
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: top left;
-    align-items: flex-end;
+    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #111145;
+
+    .footnote {
+        width: 100%;
+        padding-left: 15px;
+    }
 
     .copyright {
         display: flex;
@@ -415,3 +421,162 @@ footer {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    #leonPhoto {
+      height: 700px;
+      top:auto;
+      bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    
+    .cercleEtape img {
+        width: 20%;
+        height: 20%;
+        transform-origin: center center;
+        border-radius: 50%;
+        opacity: 0.3;
+        object-fit: cover;
+    }
+
+    .etape {
+        padding-top: 0;
+    }
+    .podium-section {
+        flex-direction: column;
+    }
+    .infos_bmx {
+        width: auto;
+    }
+    .podium-argent {
+        width: 110px;
+    }
+    .podium-or {
+        width: 110px;
+    }
+    .podium-bronze{
+        width: 110px;
+    }
+    .podium-container{
+        padding-top: 30px;
+        margin: 0 auto;
+    }
+    .medaille {
+        width: 100px;
+        height:100px;
+    }
+    .flag {
+        width: 100px;
+        height: 60px;
+    }
+
+    .leon-section {
+        height: 70rem;
+
+        #leonPhoto {
+            top : 500px;
+            left:50%;
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+
+    .flag {
+        width : 125px;
+        height: 85px;
+    }
+    .center {
+        overflow: hidden;
+    }
+
+    .etapes {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 10rem 0 10rem 20px;
+        overflow-x: hidden;
+
+        &::before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            z-index: 1;
+            background-color: none;
+            position: absolute;
+            top: 45px;
+            left: 0;
+        }
+        .etape {
+            width: 100%;
+            padding-top: 80px;
+    
+            .cercleEtape {
+                opacity: 0.5;
+                width: 700px;
+                height: 700px;
+                display: flex;
+                position: absolute;
+                bottom: 80%;
+                justify-content: center;
+                align-items: flex-end;
+            }
+    
+        }
+
+    }
+
+    .podium-section {
+        flex-direction: column;
+        .infos_bmx {
+            width: auto;
+        }
+    
+        .podium-container{
+            padding-top: 30px;
+            .podium-argent {
+                width: 110px;
+            }
+            .podium-or {
+                width: 110px;
+            }
+            .podium-bronze{
+                width: 110px;
+            }
+        }
+    }
+
+    .leon-section {
+        height: 70rem;
+        .leonInfos {
+            width: 80%;
+            padding-left: 0;
+            margin: 0 auto;
+        }
+          
+        .disciplines {
+            padding-left: 0;
+        }
+        #leonPhoto {
+            left:25%;
+            top: auto;
+            bottom: -20px;
+        }
+    }
+
+    footer {
+        height: 300px;
+        .footnote {
+            font-size: 15px;
+        }
+    }
+
+
+}

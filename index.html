@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
@@ -58,8 +58,8 @@
         </div>
         </div>
 
-    <div class="etapes">
-        <div class="etape" id="athene" aria-label="Étape Athène 1896">
+    <div class="etapes" tabindex="1">
+        <div tabindex="1" class="etape" id="athene">
             <div class="etapeContent">
             <div class="titreEtape">
                 <p>1896</p>
@@ -76,7 +76,7 @@
             <img src="img/atheneJo.jpg" alt="Les JO à Athène">
             </div>
         </div>
-        <div class="etape" id="rome" aria-label="Etape Rome 1960">
+        <div tabindex="1" class="etape" id="rome">
             <div class="etapeContent">
                 <div class="titreEtape">
                     <p>1960</p>
@@ -93,7 +93,7 @@
                 <img src="img/romeJO.jpg" alt="les JO à Rome">
             </div>
         </div>
-        <div class="etape" id="paris" aria-label="Etape Paris 2024">
+        <div tabindex="1" class="etape" id="paris" >
             <div class="etapeContent">
                 <div class="titreEtape">
                     <p>2024</p>
@@ -108,7 +108,7 @@
                 <img src="img/parisJO.jpg" alt="les JO à Paris">
             </div>
         </div>
-        <div class="etape" id="LA" aria-label="Etape prochaine à Los Angeles 2028">
+        <div tabindex="1" class="etape" id="LA">
             <div class="etapeContent">
                 <div class="titreEtape">
                     <p>2028</p>
@@ -126,7 +126,7 @@
     </div>
 
 
-    <section class="podium-section" tabindex="5">
+    <section class="podium-section" tabindex="1">
         <div class="infos_bmx">
             <h1>Triplé français en BMX racing</h1>
             <p>En BMX, les Français avaient réalisé un triplé historique, le 2 août dernier. Trois athlètes médaillés sur une même finale. Il fallait remonter en 1924 pour trouver un tel exploit lors de Jeux d’été.</p>
@@ -134,22 +134,22 @@
         </div>
     
         <div class="podium-container" aria-label="podium ">
-            <div class="podium" aria-label="Podium Argent Sylvain Andre ">
+            <div class="podium" >
                 <p>Sylvain André</p>
                 <div class="podium-argent"></div>
             </div>
-            <div class="podium" aria-label="Podium or Joris Daudet">
+            <div class="podium" >
                 <p>Joris Daudet</p>
                 <div class="podium-or"></div>
             </div>
-            <div class="podium" aria-label="Podium bronze Romain Mahieu">
+            <div class="podium">
                 <p>Romain Mahieu</p>
                 <div class="podium-bronze"></div>
             </div>
         </div>
     </section>
 
-<section class="leon-section" tabindex="6"> 
+<section class="leon-section" tabindex="1"> 
     <div class="leonInfos">
         <h1>Léon Marchand </h1>
         <p>À seulement 22 ans, il est l'athlète le plus titré des JO 2024. <br />
@@ -162,28 +162,28 @@
         </div>
         <div class="disContainer">
         <ul class="rotator">
-            <li class="discipline" aria-label="400m quatre nages">
+            <li tabindex="1" class="discipline" >
             <h2>400m quatre nages</h2>
             <div class="performance">
                 <i class='bx bxs-timer' style='color:#ffffff'></i> 
                 <p> 04 min 02 s 50 (WR, ER)* </p>
             </div>
             </li>
-            <li class="discipline" aria-label="200m quatre nages">
+            <li tabindex="1" class="discipline" >
             <h2>200m quatre nages</h2>
             <div class="performance">
                 <i class='bx bxs-timer' style='color:#ffffff'></i> 
                 <p> 1 min 54 s 06 (OR, ER)*</p>
             </div>
             </li>
-            <li class="discipline" aria-label="200m brasse">
+            <li tabindex="1" class="discipline" >
             <h2>200m brasse</h2>
             <div class="performance">
                 <i class='bx bxs-timer' style='color:#ffffff'></i> 
                 <p> 02 min 05 s 85 (OR, ER)* </p>
             </div>
             </li>
-            <li class="discipline" aria-label="200m papillon">
+            <li tabindex="1" class="discipline">
             <h2>200m papillon</h2>
             <div class="performance">
                 <i class='bx bxs-timer' style='color:#ffffff'></i> 
@@ -196,7 +196,7 @@
     </div>
 </section>
 
-<footer>
+<footer tabindex="1">
     <div class="copyright">
         <i class='bx bx-copyright' style='color:rgb(17, 17, 69)'  ></i>
         <p>Mike Candeago, Cléa Portolan</p>
